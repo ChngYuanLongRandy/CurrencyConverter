@@ -1,0 +1,37 @@
+[ {
+  "name" : "Randy",
+  "wallet" : {
+    "usd" : 500.0,
+    "sgd" : 200.0,
+    "jpy" : 0.0,
+    "cad" : 0.0,
+    "aud" : 0.0,
+    "krw" : 0.0,
+    "walletBalance" : {
+      "sgd" : 200,
+      "aud" : 0,
+      "krw" : 0,
+      "jpy" : 0,
+      "usd" : 500,
+      "cad" : 0
+    }
+  }
+}, {
+  "name" : "James",
+  "wallet" : {
+    "usd" : 200.0,
+    "sgd" : 500.0,
+    "jpy" : 0.0,
+    "cad" : 0.0,
+    "aud" : 0.0,
+    "krw" : 0.0,
+    "walletBalance" : {
+      "sgd" : 500,
+      "aud" : 0,
+      "krw" : 0,
+      "jpy" : 0,
+      "usd" : 200,
+      "cad" : 0
+    }
+  }
+} ]

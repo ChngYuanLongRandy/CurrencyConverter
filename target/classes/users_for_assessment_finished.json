@@ -1,0 +1,27 @@
+[
+	{
+		"name": "Jane",
+		"wallet": {
+			"usd": 199.90,
+			"cad": 20,
+			"hkd":51.46,
+			"krw":32,228.80
+		}
+	},
+	{
+		"name": "Mary",
+		"wallet": {
+			"cad": 488,
+			"jpy": 0.3,
+			"eur":25.59
+		}
+	},
+	{
+		"name": "Johnny",
+		"wallet": {
+			"usd": 252.34,
+			"aud": 3267.12,
+			"krw": 398
+		}
+	}
+]

@@ -1,0 +1,51 @@
+Jane cad usd 150 > Fail insufficent
+Jane cad usd 100 > pass @ 1.2989633834884 cad for 1 USD -> -100 CAD + 129.896 USD
+Mary cad eur 20 > pass @ 1.2989633834884 cad for 1usd -> -20CAD + 25.98USD @ 0.985 -> -20CAD + 25.59EUR
+Johnny usd usd 1000 > fails, no money
+Jane usd hkd 30 > pass @ 7.8487791797709 USD for hkd -> -30USD + 235.46HKD 
+Jane hkd krw 184 > pass @ 0.1274083493873 hkd for usd -> -184hkd + 23.44USD @ 1374.948768218 -> -23.44USD + 32228.80KRW
+Mary krw usd 100 > fail no krw
+Jack hkd krw 100 > fail no user
+Micheal usd eur 120 > fail no user
+Jane cad xxx 20 > fail invalid currency
+Mary yyy usd 200 > fail invalid currency
+
+
+With intermediary
+sellCurrency convert to USD use Inverse
+USD to buyCurrency use rate
+
+Without intermediary, buy USD
+sellCurrency convert to USD use Inverse
+
+Without intermediary, sell USD
+USD to buyCurrency use rate
+
+
+[
+	{
+		"name": "Jane",
+		"wallet": {
+			"usd": 199.90,
+			"cad": 20,
+			"hkd":51.46,
+			"krw":32,228.80
+		}
+	},
+	{
+		"name": "Mary",
+		"wallet": {
+			"cad": 488,
+			"jpy": 0.3,
+			"eur":25.59
+		}
+	},
+	{
+		"name": "Johnny",
+		"wallet": {
+			"usd": 252.34,
+			"aud": 3267.12,
+			"krw": 398
+		}
+	}
+]

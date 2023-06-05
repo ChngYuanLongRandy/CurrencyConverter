@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configuration is the root element for xml configuration. Appender and 
+	Logger definitions go here. -->
+<!-- The root element also includes optional attributes. -->
+<!-- monitorInterval - reloads configuration every X seconds. -->
+<!-- status - sets the statusLogger level to a certain value: set it to trace 
+	to see the status of the log4j2 system logged. -->
+<Configuration status="warn" monitorInterval="30">
+
+	<!-- The most commonly used appender is RollingFileAppender, but we will 
+		use Console and File for simplicity. There are many options in logging: Console, 
+		Files, Databases, HTTP, Sockets, etc. For more information about appenders, 
+		see the link here: https://logging.apache.org/log4j/2.x/manual/appenders.html -->
+	<Appenders>
+
+
+<!-- 		console appender. System out will default to console -->
+		<Console name="StdOut" target="SYSTEM_OUT">
+			<!-- Each appender should have a layout associated with it. This determines 
+				the output pattern of the messages. -->
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+<!--  		output.log is a relative path -->
+		<File name="FileAppender" filename="output.log">
+			<!-- This pattern is the same pattern as the default logger. For more 
+				information on layouts and patterns, see the link here https://logging.apache.org/log4j/2.x/manual/layouts.html -->
+			
+<!-- 			t stands for thread, msg means message, %-5level fata, warn, error -->
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</File>
+	</Appenders>
+
+
+	<Loggers>
+		
+<!-- 	root logger. All loggers will inherit from root	 -->
+		<Root level="error">
+			<AppenderRef ref="StdOut" />
+		</Root>
+
+		
+		<Logger name="Log to file only trace" level="trace" additivity="false">
+			<AppenderRef ref="FileAppender" />
+		</Logger>
+		
+		<Logger name="Log to file trace" level="trace">
+			<AppenderRef ref="FileAppender" />
+		</Logger>
+		
+		<Logger name="Log to file debug" level="debug">
+			<AppenderRef ref="FileAppender" />
+		</Logger>
+		
+		<Logger name="Log to file warn" level="warn">
+			<AppenderRef ref="FileAppender" />
+		</Logger>
+		
+	</Loggers>
+	
+</Configuration>
+
+<!-- https://logging.apache.org/log4j/2.x/manual/layouts.html -->

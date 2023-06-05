@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Randy",
+		"wallet": {
+			"usd": 500,
+			"sgd": 200
+		}
+	},
+	{
+		"name": "James",
+		"wallet": {
+			"usd": 200,
+			"sgd": 500
+		}
+	}
+]
